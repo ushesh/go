@@ -40,4 +40,17 @@ func main() {
 	
 	d = append(d, 2)
 	fmt.Println(d)
+	
+	var e = []int{1, 2, 4, 8, 16, 32}
+	
+	for index, value := range(e) {
+		fmt.Printf("2 raise to %d is %d\n", index, value)
+	}
+	
+    var m map[string]Vertex
+	m = make(map[string]Vertex) // index is string, value is struct Vertex
+							    // no length of map specified, just index type
+							    // and value type
+	m["Juniper"] = Vertex{1, 2}
+	fmt.Println(m)
 }
