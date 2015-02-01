@@ -53,4 +53,39 @@ func main() {
 							    // and value type
 	m["Juniper"] = Vertex{1, 2}
 	fmt.Println(m)
+
+	var n = map[string]Vertex{ // map literal
+		"BellLabs": Vertex{40, 74,}, // comma is needed inside the Vertex as
+		                             // it’s a composite literal
+		"Google":   Vertex{37, 122,},
+	}
+	fmt.Println(n)
+
+	var o = map[string]Vertex{
+		"MS":  {40, 74,}, // if the top level type is just the type name, it
+		                  // can be ommitted (only in literals, not assignment
+		                  // during program flow .i.e. o["FB"] = {0, 0} is not
+		                  // legal)
+		"IBM": {37, 122,},
+	}
+	fmt.Println(o)
+
+	m["Cisco"] = Vertex{7, 8} // inserting elements into a map
+	fmt.Println(m)
+
+	fmt.Println(m["Juniper"]) // directly accessing values in a map
+
+	value, present := m["Cisco"] // test if a value is present or not
+	fmt.Println(value, present)
+
+	_, brocade_present := m["Brocade"]
+	if brocade_present {
+		fmt.Println("Yes, it's here")
+	} else {
+		fmt.Println("Never heard of it")
+	}
+
+	fmt.Println(o)
+	delete(o, "MS") // delete an element from a map using it's key
+	fmt.Println(o)
 }
