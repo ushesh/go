@@ -49,7 +49,8 @@ func main() {
 	fmt.Println(num)
 
 	// 3rd exercise
-	records := &AllRecords{}
+	records := &AllRecords{} // created empty, slice Entries has no values,
+	                         // nextID is 0
 	records.AddRecord("Flash", "Gordon")
 	records.AddRecord("Hawk", "Eye")
 	records.AddRecord("GI", "Joe")
