@@ -33,21 +33,21 @@ func square_rt(x float64) float64 {
 //golang.org tour - Flow control statements (for, if, else, switch)
 func main() {
 	fmt.Println("Part 2 - Flow control statements")
-	
+
 	defer_var := 7.0
 	defer fmt.Println(square_rt(defer_var))
-	
+
 	fmt.Println(short_summer(25))
 	fmt.Println(long_summer(200))
-	
+
 	if short_summer(25) < long_summer(200) {
 		fmt.Println("Barely made it")
 	} else {
 		fmt.Println("Big enough")
 	}
-	
+
 	fmt.Println(square_rt(1024))
-	
+
 	os := runtime.GOOS
 	switch os {
 		case "darwin":
@@ -57,9 +57,9 @@ func main() {
 		default:
 			fmt.Printf("Unknown platform - %s", os)
 	}
-	
+
 	defer_var = 9.0
-	
+
 	for i := 0; i < 5; i++ {
 		defer fmt.Println(i)
 	}
