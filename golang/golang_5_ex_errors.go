@@ -9,6 +9,7 @@ type ErrNegativeSqrt float64
 func (e ErrNegativeSqrt) Error() string {
 	return fmt.Sprintf("cannot Sqrt negative number: %v", float64(e))
 	// golang mentioned to convert the e to float64 but doesn't say why
+	// looks like we have to do this within any Error function
 }
 
 func Sqrt(x float64) (float64, error) {
